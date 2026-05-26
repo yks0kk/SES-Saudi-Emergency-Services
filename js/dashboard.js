@@ -50,8 +50,6 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
   const notes =
     document.getElementById("notes")?.value || "";
 
-  const visibility =
-    document.getElementById("visibility")?.value || "public";
 
   if (
     !title ||
@@ -74,7 +72,6 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
     bloodType,
     disability,
     notes,
-    visibility
   );
 
   alert("Saved!");
