@@ -26,20 +26,41 @@ auth.onAuthStateChanged(async (user) => {
 });
 
 // SAVE DOCUMENT
+// SAVE DOCUMENT
 document.getElementById("saveBtn").addEventListener("click", async () => {
-  const title = document.getElementById("title").value || "";
-  const contact = document.getElementById("contact").value || "";
 
-  const emergencyContactName = document.getElementById("emergencyContactName").value || "";
-  const emergencyContactNumber = document.getElementById("emergencyContactNumber").value ||"";
-  const emergencyContactRelation = document.getElementById("emergencyContactRelation").value || "";
+  const title = document.getElementById("title")?.value || "";
+  const contact = document.getElementById("contact")?.value || "";
 
-  const bloodType = document.getElementById("bloodType").value || "";
-  const disability = document.getElementById("disability").value || "";
-  const notes = document.getElementById("notes").value || "";
-  const visibility = document.getElementById("visibility").value || "";
+  const emergencyContactName =
+    document.getElementById("emergencyContactName")?.value || "";
 
-  if (!title || !contact || !emergencyContactName || !emergencyContactNumber || !emergencyContactRelation || !bloodType) {
+  const emergencyContactNumber =
+    document.getElementById("emergencyContactNumber")?.value || "";
+
+  const emergencyContactRelation =
+    document.getElementById("emergencyContactRelation")?.value || "";
+
+  const bloodType =
+    document.getElementById("bloodType")?.value || "";
+
+  const disability =
+    document.getElementById("disability")?.value || "";
+
+  const notes =
+    document.getElementById("notes")?.value || "";
+
+  const visibility =
+    document.getElementById("visibility")?.value || "public";
+
+  if (
+    !title ||
+    !contact ||
+    !emergencyContactName ||
+    !emergencyContactNumber ||
+    !emergencyContactRelation ||
+    !bloodType
+  ) {
     alert("Please fill required fields");
     return;
   }
