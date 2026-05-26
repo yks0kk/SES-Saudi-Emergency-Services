@@ -27,17 +27,17 @@ auth.onAuthStateChanged(async (user) => {
 
 // SAVE DOCUMENT
 document.getElementById("saveBtn").addEventListener("click", async () => {
-  const title = document.getElementById("title").value;
-  const contact = document.getElementById("contact").value;
+  const title = document.getElementById("title").value || "";
+  const contact = document.getElementById("contact").value || "";
 
-  const emergencyContactName = document.getElementById("emergencyContactName").value;
-  const emergencyContactNumber = document.getElementById("emergencyContactNumber").value;
-  const emergencyContactRelation = document.getElementById("emergencyContactRelation").value;
+  const emergencyContactName = document.getElementById("emergencyContactName").value || "";
+  const emergencyContactNumber = document.getElementById("emergencyContactNumber").value ||"";
+  const emergencyContactRelation = document.getElementById("emergencyContactRelation").value || "";
 
-  const bloodType = document.getElementById("bloodType").value;
-  const disability = document.getElementById("disability").value;
-  const notes = document.getElementById("notes").value;
-  const visibility = document.getElementById("visibility").value;
+  const bloodType = document.getElementById("bloodType").value || "";
+  const disability = document.getElementById("disability").value || "";
+  const notes = document.getElementById("notes").value || "";
+  const visibility = document.getElementById("visibility").value || "";
 
   if (!title || !contact || !emergencyContactName || !emergencyContactNumber || !emergencyContactRelation || !bloodType) {
     alert("Please fill required fields");
@@ -93,8 +93,3 @@ window.copyLink = (id) => {
       alert("Failed to copy link");
     });
 };
-
-document.getElementById("logoutBtn").addEventListener("click", async () => {
-  await logout();
-  window.location.href = "login.html";
-});
