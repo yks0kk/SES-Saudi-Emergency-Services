@@ -54,7 +54,7 @@ async function load() {
       <br><hr>
       <div style="font-size:14px; color:aliceblue;">
         — Created with <b>SES</b> • 
-        <a href="https://yourwebsite.com" target="_blank" style="color:aliceblue; text-decoration:none;">
+        <a href="https://yks0kk.github.io/SES-Saudi-Emergency-Services/" target="_blank" style="color:aliceblue; text-decoration:none;">
           Checkout our website
         </a>
       </div>
